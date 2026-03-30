@@ -17,6 +17,8 @@ SetMouseDelay 0 ; Causes the smallest possible delay after each mouse movement o
 
 WindowName := "" ; Name of the window that's being checked (Needs to be set in script)
 
+Enabled := 1
+
 ExactSleep(Time) {
     Time := Time * 10000
     Last := 0
@@ -29,4 +31,8 @@ ExactSleep(Time) {
 
 Active() {
     return WinActive(WindowName)
+}
+
+SleepUInt(time){
+    return DllCall("Sleep", "UInt", time) 
 }
