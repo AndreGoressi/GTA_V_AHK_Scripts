@@ -14,7 +14,7 @@ CheckGameStatus() {
     ; Modify hotkeys ONLY in "".
     Hotkey("~$xbutton2", HeavyReloadCancel) ; Side Forward Mouse Button
     Hotkey("~$xbutton1", SniperReloadCancel) ; Side Backward Mouse Button
-    Hotkey("~$end", EWOisAbitch) ; End
+    Hotkey("~$end", InstantEWO) ; End
 
     ;ToggleHeavyReloadCancel := false
     HeavyReloadCancel(Hotkey) {
@@ -82,7 +82,7 @@ CheckGameStatus() {
         }
     }
 
-    EWOisAbitch(Hotkey) {
+    InstantEWO(Hotkey) {
         if (!Active()) {
             return
         }
